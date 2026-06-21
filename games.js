@@ -364,19 +364,20 @@ const gamesData = [
     isFavorite: false,
     rules: `
       <h3>Objective & Winning</h3>
-      <p>A fully cooperative game where players work together to defeat 12 Royal cards (Jacks, Queens, Kings). You win by defeating the final King without players running out of health (cards).</p>
+      <p>A cooperative game where you use a standard deck to defeat 12 Royal cards (Jacks, Queens, Kings). You win by defeating the final King without any player dying.</p>
       <h3>Setup</h3>
-      <p>Remove the 12 Royals. Shuffle them into 3 piles (Kings on bottom, then Queens, then Jacks on top) to form the Castle deck. Shuffle the remaining numbered cards and Aces (value 1) to form the Tavern deck. Deal hands to players (Hand size depends on player count).</p>
+      <p>Remove the 12 Royals. Shuffle them into a Castle deck (4 Kings on bottom, then 4 Queens, then 4 Jacks on top). Shuffle the remaining cards (Aces = 1) to form the Tavern draw deck. Deal a starting hand to each player (Hand size depends on player count).</p>
       <h3>Gameplay (Order of Operations)</h3>
-      <p>1. Flip the top Royal from the Castle deck to attack it.</p>
-      <p>2. On your turn, play a card (or valid combo of same-rank cards) from your hand to the table to deal damage equal to the card's value. The suit triggers a special power:</p>
+      <p>1. Flip the top Royal from the Castle deck to face it. Royals have Health AND Attack values: <strong>Jacks = 10, Queens = 15, Kings = 20</strong>.</p>
+      <p>2. <strong>Play a Card:</strong> On your turn, play a card from your hand to the table to deal damage to the Royal equal to your card's number. The suit triggers a power:</p>
       <ul>
-        <li><strong>Hearts:</strong> Heal the discard pile into the Tavern deck.</li>
-        <li><strong>Diamonds:</strong> Players draw cards.</li>
-        <li><strong>Spades:</strong> Shield against incoming Royal damage.</li>
+        <li><strong>Hearts:</strong> Heal (shuffle discarded cards back into the Tavern deck).</li>
+        <li><strong>Diamonds:</strong> Players draw cards from the Tavern deck.</li>
+        <li><strong>Spades:</strong> Shield (permanently reduces the Royal's Attack value).</li>
         <li><strong>Clubs:</strong> Deal double damage.</li>
       </ul>
-      <p>3. If the total damage dealt equals or exceeds the Royal's health (J=10, Q=15, K=20), it is defeated. If not, the Royal attacks you. You must discard cards from your hand with a total value equal to the attack damage. If you cannot, the players lose the game.</p>
+      <p>3. <strong>Defeating the Royal:</strong> If the cumulative damage played by all players equals or exceeds the Royal's Health, the Royal is defeated and discarded. The next player flips a new Royal and starts their turn.</p>
+      <p>4. <strong>Taking Damage:</strong> If the Royal is NOT defeated by your play, it strikes back! You must discard cards from your hand whose total numerical value equals or exceeds the Royal's current Attack value. If you don't have enough cards to absorb the damage, you die and everyone loses.</p>
     `
   },
   {
