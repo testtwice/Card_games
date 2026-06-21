@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Offline app to pick card games and remind you of the rules.">
+    <title>CardGame Picker</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#1e1e2f">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🃏</text></svg>">
+</head>
+<body>
+    <header class="header">
+        <h1>🃏 CardGame Picker</h1>
+        <p>Find the perfect game for your group</p>
+    </header>
+
+    <main class="container">
+        <section class="controls">
+            <div class="control-group">
+                <label for="search-input">Search:</label>
+                <input type="text" id="search-input" placeholder="Find game..." />
+            </div>
+            <div class="control-group">
+                <label for="player-count">Players:</label>
+                <input type="number" id="player-count" min="2" max="20" placeholder="e.g. 4" />
+            </div>
+            <div class="control-group checkbox-group">
+                <input type="checkbox" id="favorites-only" />
+                <label for="favorites-only">⭐ Favorites Only</label>
+            </div>
+            <div class="control-group checkbox-group">
+                <input type="checkbox" id="one-deck-only" />
+                <label for="one-deck-only">🃏 1 Deck Only</label>
+            </div>
+        </section>
+
+        <section class="games-grid" id="games-container">
+            <!-- Game cards will be dynamically injected here -->
+        </section>
+    </main>
+
+    <!-- Modal for rules -->
+    <div class="modal-overlay" id="rules-modal">
+        <div class="modal-content">
+            <button class="close-btn" id="close-modal" aria-label="Close rules">&times;</button>
+            <div id="modal-body">
+                <!-- Rules content will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notification for offline status -->
+    <div class="toast" id="offline-toast">You are currently offline. Games are available from cache!</div>
+
+    <script src="games.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
