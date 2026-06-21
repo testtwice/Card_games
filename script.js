@@ -34,13 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Handle offline toast
-    window.addEventListener('offline', () => {
-        const toast = document.getElementById('offline-toast');
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 4000);
-    });
-
     function toggleFavorite(id) {
         const game = gamesData.find(g => g.id === id);
         if (game) {

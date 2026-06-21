@@ -320,26 +320,6 @@ input[type="checkbox"] {
     border-radius: var(--border-radius);
 }
 
-/* Toast */
-.toast {
-    position: fixed;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%) translateY(100px);
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    font-weight: 600;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 2000;
-}
-
-.toast.show {
-    transform: translateX(-50%) translateY(0);
-}
-
 @media (max-width: 600px) {
     .controls {
         flex-direction: column;
