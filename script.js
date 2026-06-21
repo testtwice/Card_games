@@ -44,6 +44,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const btnMinus = document.getElementById('btn-minus');
+    const btnPlus = document.getElementById('btn-plus');
+    
+    if (btnMinus && btnPlus) {
+        btnMinus.addEventListener('click', () => {
+            let val = parseInt(playerCountInput.value);
+            if (isNaN(val)) return;
+            if (val <= 2) {
+                playerCountInput.value = '';
+            } else {
+                playerCountInput.value = val - 1;
+            }
+            renderGames();
+        });
+
+        btnPlus.addEventListener('click', () => {
+            let val = parseInt(playerCountInput.value);
+            if (isNaN(val)) {
+                playerCountInput.value = 2; // Default start
+            } else if (val < 20) {
+                playerCountInput.value = val + 1;
+            }
+            renderGames();
+        });
+    }
+
     // Render games based on filters
     function renderGames() {
         gamesContainer.innerHTML = '';

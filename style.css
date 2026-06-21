@@ -81,7 +81,7 @@ label {
     font-size: 1.1rem;
 }
 
-input[type="number"], input[type="text"] {
+input[type="text"] {
     background-color: var(--bg-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-primary);
@@ -91,19 +91,69 @@ input[type="number"], input[type="text"] {
     font-family: inherit;
     outline: none;
     transition: var(--transition);
-}
-
-input[type="number"] {
-    width: 100px;
-}
-
-input[type="text"] {
     width: 200px;
 }
 
-input[type="number"]:focus, input[type="text"]:focus {
+input[type="text"]:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 2px rgba(122, 162, 247, 0.2);
+}
+
+/* Stepper (Number Input) */
+.stepper-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+    height: 46px; /* Match text input height roughly */
+}
+
+.stepper-wrapper:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(122, 162, 247, 0.2);
+}
+
+.stepper-wrapper input[type="number"] {
+    background-color: transparent;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: inherit;
+    border: none;
+    width: 60px;
+    text-align: center;
+    padding: 0;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+.stepper-wrapper input[type="number"]::-webkit-outer-spin-button,
+.stepper-wrapper input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.stepper-btn {
+    background-color: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    border: none;
+    padding: 0 1rem;
+    height: 100%;
+    align-self: stretch;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    user-select: none;
+}
+
+.stepper-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.stepper-btn:active {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .checkbox-group {
