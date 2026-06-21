@@ -312,21 +312,21 @@ const gamesData = [
     isFavorite: false,
     rules: `
       <h3>Objective</h3>
-      <p>A compendium game where each player takes turns being the "Declarer" and choosing the rules for the hand to avoid negative points and gain positive ones.</p>
-      <h3>Setup</h3>
-      <p>Standard 52-card deck. Deal 13 cards to each player. Over the course of 28 hands, every player will declare each of the 7 contracts exactly once.</p>
-      <h3>The Contracts</h3>
-      <p>The Declarer chooses one of the following to be played:</p>
+      <p>A 28-hand game where players take turns picking the rules. Five rounds have penalties (you want to avoid taking cards), and two rounds reward points.</p>
+      <h3>Setup & Gameplay</h3>
+      <p>Deal 13 cards to each of the 4 players. For most hands, the "Declarer" leads the first card. Every other player <strong>must follow suit</strong> if they can. The highest card of the led suit wins the trick.</p>
+      <h3>The 7 Contracts</h3>
+      <p>When it's your turn to be Declarer, you choose one of these 7 games to play. You must play each one exactly once during the 28-hand game:</p>
       <ul>
-        <li><strong>No Tricks:</strong> -2 pts per trick taken.</li>
-        <li><strong>No Hearts:</strong> -2 pts per Heart taken, -6 for the Ace.</li>
-        <li><strong>No Queens:</strong> -6 pts per Queen taken.</li>
-        <li><strong>No King of Hearts (Barbu):</strong> -20 pts for taking the King of Hearts.</li>
-        <li><strong>No Last Trick:</strong> -15 pts for taking the 13th trick.</li>
-        <li><strong>Trumps:</strong> Declarer names trump. +5 pts per trick taken.</li>
-        <li><strong>Dominoes:</strong> Play layout like Sevens. First out gets +45, others positive points based on order.</li>
+        <li><strong>No Tricks:</strong> Try not to win any tricks. (-2 pts per trick won).</li>
+        <li><strong>No Hearts:</strong> Try not to win tricks containing Heart cards. (-2 pts per Heart, -6 for the Ace).</li>
+        <li><strong>No Queens:</strong> Try not to win tricks containing Queens. (-6 pts per Queen).</li>
+        <li><strong>No Barbu (King of Hearts):</strong> Avoid winning the trick containing the King of Hearts. (-20 pts).</li>
+        <li><strong>No Last Trick:</strong> Avoid winning the very last (13th) trick of the hand. (-15 pts).</li>
+        <li><strong>Trumps (Positive):</strong> Declarer names a trump suit. Try to win as many tricks as possible! (+5 pts per trick).</li>
+        <li><strong>Dominoes (Positive):</strong> No tricks. Instead, play cards to the center in sequence (building up and down from 7s). First player to empty their hand wins. (1st: +45, 2nd: +20, 3rd: +5, 4th: -5).</li>
       </ul>
-      <p>Scores are tallied at the end; all points sum to exactly 0.</p>
+      <p>At the end of 28 hands, the scores are tallied. All players' points will perfectly sum to 0!</p>
     `
   },
   {
