@@ -345,13 +345,11 @@ input[type="checkbox"] {
 }
 
 .card-back-icon {
-    width: 1em;
-    height: 1.4em;
-    border-radius: 3px;
-    object-fit: cover;
-    vertical-align: middle;
+    height: 1.2em;
+    width: auto;
+    vertical-align: -0.2em;
     margin-right: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
 }
 
 @media (max-width: 600px) {
