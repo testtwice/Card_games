@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="meta-tag">
                         👥 ${game.minPlayers === game.maxPlayers ? game.minPlayers : `${game.minPlayers}-${game.maxPlayers}`} players
                     </div>
-                    ${game.decks > 1 ? `<div class="meta-tag" title="Requires ${game.decks} decks">🃏x${game.decks}</div>` : ''}
+                    ${game.decks > 1 ? `<div class="meta-tag" title="Requires ${game.decks} decks"><img src="card-back.jpg" class="card-back-icon" alt="Decks">x${game.decks}</div>` : ''}
                 </div>
                 <button class="btn-rules">View Rules</button>
             `;
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="meta-tag" style="display:inline-block; margin-bottom: 1rem;">
                 👥 ${game.minPlayers === game.maxPlayers ? game.minPlayers : `${game.minPlayers}-${game.maxPlayers}`} players
             </div>
-            ${game.decks > 1 ? `<div class="meta-tag" style="display:inline-block; margin-bottom: 1rem; margin-left: 0.5rem;" title="Requires ${game.decks} decks">🃏x${game.decks}</div>` : ''}
+            ${game.decks > 1 ? `<div class="meta-tag" style="display:inline-block; margin-bottom: 1rem; margin-left: 0.5rem;" title="Requires ${game.decks} decks"><img src="card-back.jpg" class="card-back-icon" alt="Decks">x${game.decks}</div>` : ''}
             <div class="rules-content">
                 ${game.rules}
             </div>

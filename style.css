@@ -344,6 +344,16 @@ input[type="checkbox"] {
     background-color: rgba(255, 255, 255, 0.02);
 }
 
+.card-back-icon {
+    width: 1em;
+    height: 1.4em;
+    border-radius: 3px;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
 @media (max-width: 600px) {
     .controls {
         flex-direction: column;

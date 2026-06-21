@@ -1,4 +1,4 @@
-const CACHE_NAME = 'card-games-v19';
+const CACHE_NAME = 'card-games-v20';
 const urlsToCache = [
   './',
   './index.html',
@@ -8,7 +8,8 @@ const urlsToCache = [
   './manifest.json',
   './icon-192.png',
   './icon-512.png',
-  './apple-touch-icon.png'
+  './apple-touch-icon.png',
+  './card-back.jpg'
 ];
 
 self.addEventListener('install', event => {
