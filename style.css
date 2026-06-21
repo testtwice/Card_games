@@ -409,9 +409,27 @@ input[type="checkbox"] {
     }
     .control-group {
         justify-content: space-between;
+        flex-wrap: wrap;
     }
-    input[type="number"], input[type="text"] {
+    input[type="text"] {
         width: 100%;
+    }
+    .stepper-wrapper {
+        width: 100%;
+        height: 54px;
+        margin-top: 0.25rem;
+    }
+    .stepper-wrapper input[type="number"] {
+        flex: 1;
+        width: auto;
+        font-size: 1.2rem;
+    }
+    .stepper-btn {
+        width: 64px;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .modal-content {
         padding: 1.5rem;
