@@ -441,7 +441,16 @@ const gamesData = [
       <h3>Gameplay</h3>
       <p>Players bid on how many tricks they will take (min 6) and name the trump suit. "Right Bower" is Jack of trump, "Left Bower" is Jack of same color. Highest bidder takes the kitty, discards 3 cards, and leads the first trick. Must follow suit.</p>
       <h3>Scoring</h3>
-      <p>Points are awarded based on a specific bidding table. If the bidding team makes their bid, they get the points. If they fail, they lose the points.</p>
+      <p>If the bidding team makes their bid, they get the points below. If they fail, they are "set back" (lose) that amount. Opponents score 10 pts per trick they capture.</p>
+      <table class="rules-table">
+        <tr><th>Tricks</th><th>♠ Spades</th><th>♣ Clubs</th><th>♦ Diamonds</th><th>♥ Hearts</th><th>No Trump</th></tr>
+        <tr><td><strong>6</strong></td><td>40</td><td>60</td><td>80</td><td>100</td><td>120</td></tr>
+        <tr><td><strong>7</strong></td><td>140</td><td>160</td><td>180</td><td>200</td><td>220</td></tr>
+        <tr><td><strong>8</strong></td><td>240</td><td>260</td><td>280</td><td>300</td><td>320</td></tr>
+        <tr><td><strong>9</strong></td><td>340</td><td>360</td><td>380</td><td>400</td><td>420</td></tr>
+        <tr><td><strong>10</strong></td><td>440</td><td>460</td><td>480</td><td>500</td><td>520</td></tr>
+      </table>
+      <p style="text-align: center; font-size: 0.9em; margin-top: 0.5rem; color: var(--text-secondary);"><em>Misère (Bid to lose all tricks): 250 pts | Open Misère: 500 pts</em></p>
     `
   },
   {
