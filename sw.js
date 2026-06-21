@@ -1,11 +1,11 @@
-const CACHE_NAME = 'card-games-v13';
+const CACHE_NAME = 'card-games-v14';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/script.js',
-  '/games.js',
-  '/manifest.json'
+  './',
+  './index.html',
+  './style.css',
+  './script.js',
+  './games.js',
+  './manifest.json'
 ];
 
 self.addEventListener('install', event => {
