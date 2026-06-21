@@ -5,5 +5,6 @@ export default defineConfig({
   use: {
     baseURL: 'http://localhost:8000',
     headless: true,
+    serviceWorkers: 'block',
   },
 });

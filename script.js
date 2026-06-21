@@ -27,8 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('./sw.js')
                 .then(registration => {
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }, err => {
+                    if (registration) {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    } else {
+                        console.log('ServiceWorker registration was blocked or undefined.');
+                    }
+                })
+                .catch(err => {
                     console.log('ServiceWorker registration failed: ', err);
                 });
         });

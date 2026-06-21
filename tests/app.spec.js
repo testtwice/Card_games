@@ -2,6 +2,11 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Card Game Picker PWA', () => {
   test.beforeEach(async ({ page }) => {
+    // Fail the test immediately if there is a JS error (like a SyntaxError)
+    page.on('pageerror', exception => {
+      expect(exception).toBeNull();
+    });
+    
     // Go to the locally hosted app
     await page.goto('/');
     // Clear localStorage to ensure fresh state for favorites
