@@ -2,7 +2,7 @@
   "name": "Card Game Picker",
   "short_name": "CardGames",
   "description": "An offline-first app to help pick card games and remind you of the rules.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#121212",
   "theme_color": "#bb86fc",
