@@ -652,4 +652,3 @@ const gamesData = [
   }
 ];
 
-export default gamesData;
