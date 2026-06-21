@@ -4,7 +4,7 @@ const gamesData = [
     name: 'Kings Corner',
     minPlayers: 2,
     maxPlayers: 4,
-    isFavorite: true,
+    isFavorite: false,
     rules: `
       <h3>Objective</h3>
       <p>Be the first player to get rid of all your cards.</p>
@@ -26,7 +26,7 @@ const gamesData = [
     name: 'Golf (4-Card)',
     minPlayers: 2,
     maxPlayers: 6,
-    isFavorite: true,
+    isFavorite: false,
     rules: `
       <h3>Objective</h3>
       <p>Earn the lowest amount of points over 9 rounds.</p>
@@ -48,7 +48,7 @@ const gamesData = [
     name: 'Golf (6-Card)',
     minPlayers: 2,
     maxPlayers: 6,
-    isFavorite: true,
+    isFavorite: false,
     rules: `
       <h3>Objective</h3>
       <p>Earn the lowest amount of points over 9 rounds.</p>
@@ -70,7 +70,7 @@ const gamesData = [
     name: 'Screw Your Neighbor',
     minPlayers: 3,
     maxPlayers: 8,
-    isFavorite: true,
+    isFavorite: false,
     rules: `
       <h3>Objective</h3>
       <p>Avoid having the lowest card so you don't lose your tokens.</p>
